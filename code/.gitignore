@@ -1,0 +1,12 @@
+data/
+.idea/
+__pycache__/
+.envrc
+**/.ipynb_checkpoints/
+logs/
+checkpoints/
+lightning_logs/
+euler_commands.md
+setup_antigravity.md
+*.png
+*.pt

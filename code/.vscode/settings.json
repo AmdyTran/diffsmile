@@ -1,0 +1,25 @@
+{
+    "ruff.configurationPreference": "filesystemFirst",
+    "ruff.format.backend": "uv",
+    "python.languageServer": "None",
+    "ty.diagnosticMode": "workspace",
+    "python.envFile": "${workspaceFolder}/.venv",
+    "ty.interpreter": [
+        "${workspaceFolder}/.venv/bin/python"
+    ],
+    "files.exclude": {
+        "**/__marimo__": true,
+        "**/.ruff_cache": true,
+        "**/.venv": true
+    },
+    "ty.disableLanguageServices": false,
+    "notebook.formatOnSave.enabled": true,
+    "notebook.codeActionsOnSave": {
+        "notebook.source.fixAll": "explicit",
+        "notebook.source.organizeImports": "explicit"
+    },
+    "pyrefly.trace.server": "verbose",
+    "python.pyrefly.displayTypeErrors": "force-on",
+    "basedpyright.analysis.diagnosticMode": "workspace",
+    "basedpyright.analysis.typeCheckingMode": "off",
+}
