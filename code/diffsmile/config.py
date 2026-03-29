@@ -54,6 +54,7 @@ class DatasetConfig:
     merged_surfaces_path: Path = conditional_data_path / "spx_iv_dataset_full_365.pt"
     merged_conditioning_scalars_path: Path = CORE_DATA_PATH / "conditioning_vectors_w_ret.pt"
 
+    trained_model_path: Path = CORE_DATA_PATH.parent / "trained_model.ckpt"
 
 config = TrainingConfigConditionalDiffusion()
 

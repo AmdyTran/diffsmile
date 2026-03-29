@@ -10,3 +10,4 @@ euler_commands.md
 setup_antigravity.md
 *.png
 *.pt
+trained_model.ckpt

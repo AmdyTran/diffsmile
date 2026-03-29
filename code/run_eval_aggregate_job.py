@@ -25,9 +25,7 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--checkpoint-path",
         type=Path,
-        default=Path(
-            "/cluster/project/math/andtran/develop/masters_thesis/code/lightning_logs/version_110/checkpoints/gnot-best-epoch=464-val_loss=0.002852.ckpt"
-        ),
+        default=config.trained_model_path,
         help="Path to lightning checkpoint (.ckpt).",
     )
     parser.add_argument(
