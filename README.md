@@ -174,6 +174,7 @@ be changed before the workflow runs on another machine.
 The most important ones are:
 
 - dataset paths in `code/diffsmile/config.py`
+- `trained_model_path` in `code/diffsmile/config.py`
 - `DATA_DIR` in `code/diffsmile/gnot_lightning.py`
 - the cluster working directory in `code/train.sh`
 
@@ -194,8 +195,29 @@ These are useful once a checkpointed model is available.
 
 ## Model release
 
-Pretrained model weights are not uploaded yet. They can be added later once the
-preferred release and storage format is fixed.
+The pretrained checkpoint is available in GitHub Releases.
+
+Download the `.ckpt` file from the latest release and place it at the path
+configured by `DatasetConfig.trained_model_path` in
+`code/diffsmile/config.py`.
+
+By default, that path is:
+
+```text
+code/trained_model.ckpt
+```
+
+If you want to store the checkpoint somewhere else, either update
+`trained_model_path` in `code/diffsmile/config.py` or pass the checkpoint
+explicitly to the evaluation script:
+
+```bash
+cd code
+uv run python run_eval_aggregate_job.py --checkpoint-path /path/to/trained_model.ckpt
+```
+
+This lets users run evaluation with the released pretrained model without
+having to retrain from scratch.
 
 ## Thesis
 
